@@ -26,8 +26,9 @@ router.post('/', async (req, res,next) => {
             reEnterPassword: req.body.reEnterPassword,
             fullname: req.body.fullname,
             prefname: req.body.prefname,
+            degree:req.body.degree,
             phoneno: req.body.phoneno,
-            secphoneno: req.body.secphoneno,
+           
             email: req.body.email,
             contactmethod: req.body.contactmethod,
             position: req.body.position,
@@ -55,7 +56,7 @@ router.put('/:id' , async (req,res) => {
     if(error) res.status(404).send(error.details[0].message)
 
     const register = await  Register.findByIdAndUpdate(req.params.id , {userName: req.body.userName,enterPassword: req.body.enterPassword, reEnterPassword: req.body.reEnterPassword, fullname: req.body.fullname, 
-        prefname: req.body.prefname,phoneno: req.body.phoneno,secphoneno: req.body.secphoneno,email: req.body.email,contactmethod: req.body.contactmethod,position: req.body.position,
+        prefname: req.body.prefname,degree:req.body.degree,phoneno: req.body.phoneno,email: req.body.email,contactmethod: req.body.contactmethod,position: req.body.position,
         institution: req.body.institution,dept: req.body.dept,city: req.body.city,state: req.body.state,zip: req.body.zip} , {new : true})
     
     if(!register) return res.status(404).send('the category with the given Id was not found')

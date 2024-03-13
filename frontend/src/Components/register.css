@@ -14,13 +14,13 @@ h2 {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-/* .whole{
+.whole{
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;  
   
-} */
+}
 form {  
     max-width: 700px;
     margin: 0 auto;
@@ -29,7 +29,7 @@ form {
     /* justify-content: center;
     align-items: center; */
     background-color: #fff;
-    padding: 20px;
+    padding: 40px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -59,12 +59,18 @@ form {
     /* padding: 8px; */
     height: 35px;
     /* margin-bottom: 10px; */
-    gap: 2rem;
+    gap: 3rem;
     border: 1px solid hsl(0, 0%, 80%);
     border-radius: 3px;
     /* box-sizing: border-box; */
+   
 }
-
+.insitution1,.personal1{
+    text-align: center;
+}
+.insitution1{
+    padding-top: 20px;
+}
 
 button[type="submit"] {
     background-color: #4caf50;

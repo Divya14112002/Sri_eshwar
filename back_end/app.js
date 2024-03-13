@@ -3,13 +3,14 @@ const registers=require('./Routes/register')
 const logins=require('./Routes/login')
 const app=express()
 const mongoose = require('mongoose')
-
+const cors = require('cors')
 
 mongoose.connect('mongodb://127.0.0.1/sri_eshwar')
 .then(()=>console.log("connection successful"))
 .catch(err=>console.log("connection unsuccessful",err))
 
 app.use(express.json());
+app.use(cors()); 
 app.use('/api/register' , registers)
 app.use('/api/login', logins)
 
